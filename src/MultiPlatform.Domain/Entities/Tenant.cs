@@ -14,5 +14,7 @@ namespace MultiPlatform.Domain.Entities
         public string Identifier { get; set; } = string.Empty;
 
         public bool IsActive { get; set; } = true;
+        public ICollection<User> Users { get; set; } = new List<User>();
+        public ICollection<Role> Roles { get; set; } = new List<Role>();
     }
 }

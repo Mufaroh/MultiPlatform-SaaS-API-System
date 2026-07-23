@@ -16,5 +16,9 @@ namespace MultiPlatform.Domain.Entities
         public string Description { get; set; } = string.Empty;
 
         public Tenant Tenant { get; set; } = null!;
+        public ICollection<User> Users { get; set; } = new List<User>();
+
+        public ICollection<Permission> Permissions { get; set; } = new List<Permission>();
+
     }
 }

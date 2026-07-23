@@ -22,5 +22,6 @@ namespace MultiPlatform.Domain.Entities
         public bool IsActive { get; set; } = true;
 
         public Tenant Tenant { get; set; } = null!;
+        public ICollection<Role> Roles { get; set; } = new List<Role>();
     }
 }
