@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MultiPlatform.Domain.Enums
 
 namespace MultiPlatform.Domain.Entities
 {
@@ -19,7 +20,8 @@ namespace MultiPlatform.Domain.Entities
 
         public string PasswordHash { get; set; } = string.Empty;
 
-        public bool IsActive { get; set; } = true;
+        public UserStatus Status { get; set; } = UserStatus.Pending;
+
 
         public Tenant Tenant { get; set; } = null!;
         public ICollection<Role> Roles { get; set; } = new List<Role>();
